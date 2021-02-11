@@ -3,11 +3,11 @@ const heroes = {
         nombre: 'Capitan América',
         poder: 'Aguantar'
     },
-    Iron: {
+    iron: {
         nombre: 'Ironman',
         poder: 'Conocimiento e inteligencia'
     },
-    Spider: {
+    spider: {
         nombre: 'Spiderman',
         poder: 'Sexto sentido arágnido'
     }

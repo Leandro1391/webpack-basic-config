@@ -23,3 +23,22 @@ export const searchHeroe = (id) => {
     });
 
 }
+
+const promiseSlow = new Promise((resolve, reject) => {
+    setTimeout(() => resolve('Promise slow'), 2000);
+});
+
+const promiseMedium = new Promise((resolve, reject) => {
+    setTimeout(() => resolve('Promise medium'), 1500);
+});
+
+const promiseFast = new Promise((resolve, reject) => {
+    setTimeout(() => resolve('Promise fast'), 1000);
+});
+
+export {
+    promiseFast,
+    promiseMedium,
+    promiseSlow
+}
+

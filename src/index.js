@@ -5,7 +5,7 @@ import './styles.css';
 // const heroeId = 'capi';
 // const heroeId = 'capi2';
 
-const heroeId1 = 'capi';
+const heroeId1 = 'capi1';
 const heroeId2 = 'iron';
 
 
@@ -47,7 +47,9 @@ Promise.all([searchHeroe(heroeId1), searchHeroe(heroeId2)])
     .then(([heroe1, heroe2]) => {
         // console.log('promise.all', heroes);
         console.log(`Enviando a ${heroe1.nombre} y ${heroe2.nombre} a la misión`);
-    });
+    }).catch(err => {
+        alert(err);
+    })
 
 
 console.log('fin de la instrucción');

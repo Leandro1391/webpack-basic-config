@@ -36,6 +36,22 @@ const promiseFast = new Promise((resolve, reject) => {
     setTimeout(() => resolve('Promise fast'), 1000);
 });
 
+
+//función Asincróno
+
+export const searchHeroeAsync = async (id) => {
+
+    const heroe = heroes[id];
+
+    // (heroes) ? heroe : Error(`No existe un héroe con el id ${id}`);
+
+    if (heroe) {
+        return heroe;
+    } else {
+        throw Error(`No existe un héroe con el id ${id}`);
+    }
+}
+
 export {
     promiseFast,
     promiseMedium,

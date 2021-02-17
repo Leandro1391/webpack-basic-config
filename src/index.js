@@ -1,3 +1,10 @@
 import { getHeroesArr } from './js/await.js';
 
-getHeroesArr().then(console.table);
+console.time('await');
+
+
+getHeroesArr().then(heroes => {
+    console.table(heroes);
+
+    console.timeEnd('await');
+});

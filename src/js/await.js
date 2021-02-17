@@ -2,9 +2,16 @@ import { searchHeroe, searchHeroeAsync } from "./promesas";
 
 const heroesIds = ['capi', 'iron', 'spider'];
 
-export const getHeroesArr = async () => {
+export const getHeroesArr = async () => await Promise.all(heroesIds.map(searchHeroeAsync));
 
+/* export const getHeroesArr = async () => {
     return await Promise.all(heroesIds.map(searchHeroeAsync));
+} */
+
+
+// export const getHeroesArr = async () => {
+
+//     return await Promise.all(heroesIds.map(searchHeroeAsync));
 
     /*   const heroesArr = [];
   
@@ -22,4 +29,4 @@ export const getHeroesArr = async () => {
     // searchHeroeAsync.forEach(heroe => heroesArr.push(heroe));
 
     // return heroesArr;
-}
+// }

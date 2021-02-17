@@ -4,6 +4,21 @@ const heroesIds = ['capi', 'iron', 'spider'];
 
 export const getHeroesArr = async () => await Promise.all(heroesIds.map(searchHeroeAsync));
 
+export const obtenerHeroeAwait = async(id) => {
+
+    try {
+        return await searchHeroeAsync(id);
+    } catch (error) {
+        console.log(`Error en el await (CATCH) es: ${error}`);
+        // throw error;
+        return {
+            nombre: 'Sin nombre',
+            poder: 'Sin poder'
+        };
+    }
+
+}
+
 /* export const getHeroesArr = async () => {
     return await Promise.all(heroesIds.map(searchHeroeAsync));
 } */
